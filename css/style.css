@@ -4,10 +4,54 @@
 body {
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size:14px;
-    margin:0;
+    margin:auto;
     padding:0;
 }
 
+.inner
+{
+    width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.level_1:hover .level_2
+{
+    display: block;
+}
+
+nav ul, nav li
+{
+    list-style: none;
+}
+
+nav > ul > li
+{
+    display:inline-block;
+}
+
+
+li.level_1
+{
+    display: inline-block;
+}
+
+
+.level_2 li:hover
+{
+    background-color: #337ab7;
+}
+ul li ul li{
+    display: none;
+    position: absolute;
+}
+
+/*Zum Einklappen des Menüs*/
+ul li:hover li
+{
+    background-color: white;
+    display: block;
+}
 .logo {
     font-size:30px;
     text-transform: uppercase;
@@ -30,7 +74,8 @@ body {
 
 .stripe {
     background-color:#337ab7;
-    width:100%;
+    width:auto;
+    margin-left: auto;
     height:15px;
 
 }
