@@ -6,7 +6,7 @@ body
     margin:auto;
 }
 
-/*Webseiten Inhalt auf 990px eingestellt und mit margin (auto) wird automatisch zentriert.*/
+/*Webseiten Inhalt wird hier auf 990px eingestellt und mit margin (auto) wird automatisch zentriert.*/
 .inner
 {
     width:990px;
