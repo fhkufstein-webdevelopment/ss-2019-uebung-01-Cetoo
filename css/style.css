@@ -1,58 +1,93 @@
-
-
-
-body {
+body
+{
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size:14px;
+    padding:0;
     margin:auto;
+}
+
+/*Webseiten Inhalt auf 990px eingestellt und mit margin (auto) wird automatisch zentriert.*/
+.inner
+{
+    width:990px;
+    margin: auto;
+}
+
+/*Hiermit entferne ich die Text Decoration von der Navleiste*/
+.mainNavi ul
+{
+    list-style:none;
+}
+
+.mainNavi a{
+    text-decoration: none;
+}
+
+/*padding und margin von level_1 und level_2 auf 0 gestellt, um Blöcke nach links zu rücken*/
+.level_1,.level_2
+{
+    margin: 0;
     padding:0;
 }
 
-.inner
-{
-    width: 990px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.level_1:hover .level_2
-{
-    display: block;
-}
-
-nav ul, nav li
-{
-    list-style: none;
-}
-
-nav > ul > li
+/*Inline-Block erstellt, damit die Navleiste nebeneinander angezeigt wird.*/
+.level_1  li
 {
     display:inline-block;
+    background-color: #fff;
+    color: #337ab7;
+    width: 200px;
+    position:relative;
+    padding-bottom:5px;
+    margin-right: -70px;
 }
 
-
-li.level_1
+/*Our Product und About us mit Schriftgröße 18px und Fett gedruckt*/
+.level_1 > li > a
 {
-    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-
-.level_2 li:hover
+.level_2
 {
-    background-color: #337ab7;
-}
-ul li ul li{
     display: none;
+}
+
+.level_2 > li
+{
+    display:block;
+    position: relative;
+    width:300px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    z-index: 1;
+    /*Der  Z-Index gibt an, in welcher Reihenfolge die einzelnen Elemente auf dem Ausgabemedium dargestellt werden*/
+}
+
+/*Der Abstand der Ausklappbaren Liste (linker Abstand) bei dem Hover Effekt*/
+.level_2 > li > a
+{
+    padding-left:3px;
+}
+
+/*Hier wird der Hover Effekt eingebunden.*/
+header nav .level_1 li:hover .level_2 {
+    display:block;
     position: absolute;
 }
 
-/*Zum Einklappen des Menüs*/
-ul li:hover li
+/*Hover Effekt Hintergrundfarbe für die Unterelemente*/
+header nav .level_2 li:hover
 {
-    background-color: white;
-    display: block;
+    display:block;
+    background-color:#337ab7;
+    color:#fff;
 }
-.logo {
+
+
+.logo
+{
     font-size:30px;
     text-transform: uppercase;
 
@@ -72,30 +107,24 @@ ul li:hover li
     margin-bottom:50px;
 }
 
-.stripe {
+.stripe
+{
     background-color:#337ab7;
     width:auto;
-    margin-left: auto;
     height:15px;
-
 }
 
-.logo:before {
+.logo:before
+{
     content:"\f155";
     font-family: "FontAwesome", sans-serif;
     display: inline-block;
     margin-right:15px;
 }
 
-footer {
+footer
+{
     background-color:#f8f9fa;
     height: 150px;
     padding-top:20px;
 }
-
-
-
-
-
-
-
